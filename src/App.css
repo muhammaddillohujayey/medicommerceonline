@@ -1,5 +1,8 @@
+/* App.css */
 .App {
   text-align: center;
+  background-color: #A3B1A8; /* Color de fondo */
+  color: #3B3B3B; /* Color del texto */
 }
 
 .App-logo {
@@ -13,21 +16,29 @@
   }
 }
 
+/* Estilo básico para el header */
 .App-header {
-  background-color: #282c34;
+  background-color: #A3B1A8; /* Azul Claro */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #FFFFFF; /* Blanco para el texto */
 }
 
+/* Enlaces en la app */
 .App-link {
-  color: #61dafb;
+  color: #6BBE45; /* Verde Suave */
+  text-decoration: none; /* Sin subrayado */
 }
 
+.App-link:hover {
+  color: #4DA1F1; /* Azul Claro al pasar el mouse */
+}
+
+/* Animación para el logo */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +46,19 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Estilos adicionales para mejorar la accesibilidad */
+button {
+  background-color: #4DA1F1; /* Botones */
+  color: #FFFFFF; /* Texto en botones */
+  border: none;
+  border-radius: 5px; /* Esquinas redondeadas */
+  padding: 10px 20px; /* Espaciado interno */
+  cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+button:hover {
+  background-color: #3B3B3B; /* Cambia el color al pasar el mouse */
 }

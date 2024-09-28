@@ -1,0 +1,34 @@
+/* Header.css */
+.header-container {
+    display: flex;
+    align-items: center;
+    background-color: #A3B1A8; /* Azul Claro */
+    padding: 20px;
+    color: #3B3B3B; /* Blanco */
+  }
+  
+  .header-container h1 {
+    margin: 20;
+    font-size: 2.5rem; /* Tamaño de fuente más grande para el título */
+  }
+  
+  .header-container nav {
+    margin-top: 10px; /* Espaciado entre el título y la navegación */
+  }
+  
+  .header-container a {
+    color: #6BBE45; /* Verde Suave para los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    margin: 0 10px; /* Espaciado entre enlaces */
+  }
+  
+  .header-container a:hover {
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+  }
+/* header.css */
+.header-logo {
+    width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto; /* Mantiene la proporción del logo */
+    margin-bottom: 10px; /* Espaciado debajo del logo */
+  }
+    
