@@ -1,0 +1,12 @@
+/* src/components/MainContent.css */
+.main-content {
+    background-color: #4B7B70;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #FFFFFF; /* Blanco para el texto */
+  }
+  

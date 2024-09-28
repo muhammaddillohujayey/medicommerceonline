@@ -3,6 +3,7 @@
   text-align: center;
   background-color: #A3B1A8; /* Color de fondo */
   color: #3B3B3B; /* Color del texto */
+  min-height: 100vh; /* Asegura que el fondo ocupe toda la altura */
 }
 
 .App-logo {
@@ -14,18 +15,6 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-/* Estilo básico para el header */
-.App-header {
-  background-color: #A3B1A8; /* Azul Claro */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #FFFFFF; /* Blanco para el texto */
 }
 
 /* Enlaces en la app */
@@ -61,4 +50,15 @@ button {
 
 button:hover {
   background-color: #3B3B3B; /* Cambia el color al pasar el mouse */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .App {
+    font-size: 0.9rem; /* Ajuste del tamaño de fuente para pantallas pequeñas */
+  }
+
+  button {
+    padding: 8px 16px; /* Ajuste del espaciado en botones para pantallas pequeñas */
+  }
 }
