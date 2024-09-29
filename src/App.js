@@ -1,4 +1,6 @@
 import React from 'react';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css"; 
 import './App.css'; // Estilos globales de la app
 import Header from './components/header/header.js';
 import MainContent from './components/maincontent/maincontent.js';

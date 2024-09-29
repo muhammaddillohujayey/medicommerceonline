@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000; /* Asegúrate de que esté por encima de todo */
 }
 
 .modal-content {
@@ -18,6 +19,7 @@
     width: 100%; /* Ocupa todo el ancho disponible */
     max-width: 400px; /* Ancho máximo del modal */
     position: relative;
+    z-index: 1001; /* Asegúrate de que esté por encima del overlay */
 }
 
 .modal-close {
@@ -32,7 +34,6 @@
     transition: color 0.3s; /* Transición suave para el color */
 }
 
-/* Asegúrate de que el botón de cerrar sea visible en todo momento */
 .modal-close:hover {
     color: #6BBE45; /* Cambia el color al pasar el mouse */
 }

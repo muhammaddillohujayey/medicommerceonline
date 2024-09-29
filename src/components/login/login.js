@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './login.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
-import logo from '../../images/logoMC.webp';
+import { faUser, faLock, faPills } from '@fortawesome/free-solid-svg-icons';
 
 const Login = ({setShowModal, setUserEmail}) => {
   const [email, setEmail] = useState('');
@@ -32,7 +31,7 @@ const Login = ({setShowModal, setUserEmail}) => {
   return (
     <div className="login-container">
       <div className="login-logo">
-      <img src={logo} alt="MediCommerce Logo" />
+      <FontAwesomeIcon icon={faPills} className="header-logo" />
       </div>
       <form className="login-form" onSubmit={handleLogin}>
         <div className="input-group">

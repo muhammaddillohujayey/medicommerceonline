@@ -1,0 +1,12 @@
+.carousel-container {
+    width: 100%;
+    max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 0 auto; /* Centra el carrusel */
+    position: relative; /* Para asegurar que el z-index funcione correctamente */
+    z-index: 1; /* Z-index menor que el modal */
+  }  
+  
+  .carousel-image {
+    width: 100%;
+    border-radius: 8px; /* Agrega bordes redondeados si lo deseas */
+  }  

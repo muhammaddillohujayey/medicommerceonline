@@ -1,10 +1,15 @@
 .header-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-around;
   align-items: center; /* Centrar verticalmente todos los elementos */
   background-color: #A3B1A8; /* Color de fondo del header */
-  padding: 15px 20px; /* Espaciado interno */
+  padding: 20px 20px; /* Aumentar el espaciado interno superior e inferior */
   color: #3B3B3B; /* Color del texto */
+  z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra para destacarlo */
 }
 .menu-button {
   background: none; /* Sin fondo */
@@ -12,7 +17,7 @@
   display: flex;
   align-items: center; /* Centrar verticalmente */
   cursor: pointer; /* Cambia el cursor al pasar por encima */
-  margin-right: 5px; /* Espacio entre el ícono del menú y el logo */
+  margin-right: 10px; /* Espacio entre el ícono del menú y el logo */
 }
 
 .menu-icon {
@@ -29,8 +34,8 @@
 }
 
 .header-logo {
-  width: 80px; /* Ajustar el tamaño del logo */
-  height: auto; /* Mantiene la proporción del logo */
+  width: 40px; /* Ajustar el tamaño del logo */
+  height: 40px; /* Mantiene la proporción del logo */
   margin-right: 10px; /* Espacio entre el logo y el título */
 }
 
@@ -95,5 +100,26 @@
 }
 
 .user-link:hover {
+  color: #6BBE45; /* Color al pasar el mouse */
+}
+.user-section {
+  display: flex;
+  align-items: center;
+}
+
+.cart-button {
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  display: flex;
+  align-items: center; /* Centrar verticalmente */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  margin-left: 5px; /* Espacio entre el ícono del menú y el logo */
+}
+
+.cart-icon {
+  font-size: 1.5rem; /* Tamaño del ícono del menú */
+  color: #3B3B3B; /* Color del ícono */
+}
+.cart-icon:hover {
   color: #6BBE45; /* Color al pasar el mouse */
 }
