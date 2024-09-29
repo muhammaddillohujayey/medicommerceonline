@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css"; 
+import './App.css'; // Estilos globales de la app
+import Header from './components/header/header.js';
+import MainContent from './components/maincontent/maincontent.js';
+import Footer from './components/footer/footer.js';
+import { ShoppingCartProvider } from './components/shoppingcart/shoppingcart'; // Asegúrate de que la ruta sea correcta
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ShoppingCartProvider> {/* Envuelve la aplicación con ShoppingCartProvider */}
+      <div className="App">
+        <Header /> {/* Usar el componente Header */}
+        <MainContent /> {/* Contenido principal */}
+        <Footer /> {/* Usar el componente Footer */}
+      </div>
+    </ShoppingCartProvider>
   );
 }
 

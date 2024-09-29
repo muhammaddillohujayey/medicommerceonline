@@ -1,5 +1,9 @@
+/* App.css */
 .App {
   text-align: center;
+  background-color: #A3B1A8; /* Color de fondo */
+  color: #3B3B3B; /* Color del texto */
+  min-height: 100vh; /* Asegura que el fondo ocupe toda la altura */
 }
 
 .App-logo {
@@ -13,26 +17,48 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
+/* Enlaces en la app */
 .App-link {
-  color: #61dafb;
+  color: #6BBE45; /* Verde Suave */
+  text-decoration: none; /* Sin subrayado */
 }
 
+.App-link:hover {
+  color: #4DA1F1; /* Azul Claro al pasar el mouse */
+}
+
+/* Animación para el logo */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Estilos adicionales para mejorar la accesibilidad */
+button {
+  background-color: #4DA1F1; /* Botones */
+  color: #FFFFFF; /* Texto en botones */
+  border: none;
+  border-radius: 5px; /* Esquinas redondeadas */
+  padding: 10px 20px; /* Espaciado interno */
+  cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+button:hover {
+  background-color: #3B3B3B; /* Cambia el color al pasar el mouse */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .App {
+    font-size: 0.9rem; /* Ajuste del tamaño de fuente para pantallas pequeñas */
+  }
+
+  button {
+    padding: 8px 16px; /* Ajuste del espaciado en botones para pantallas pequeñas */
   }
 }

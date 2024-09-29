@@ -1,0 +1,75 @@
+.login-container {
+    width: 100%; /* Ocupa todo el ancho disponible del modal */
+    max-width: 460px; /* Ancho máximo del contenedor de login */
+    margin: 0 auto; /* Centrado automático */
+    padding: 20px; /* Espaciado interno */
+    background-color: #fff; /* Color de fondo */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.login-logo {
+    text-align: center; /* Centrando el logo */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+.login-logo img {
+    width: 100px; /* Ancho del logo */
+}
+
+.login-form {
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Orientación vertical */
+}
+
+.input-group {
+    display: flex; /* Usar flexbox */
+    align-items: center; /* Centrar verticalmente */
+    margin-bottom: 15px; /* Margen inferior */
+    border-bottom: 1px solid #ccc; /* Línea inferior */
+}
+
+.icon {
+    margin-right: 10px; /* Espaciado a la derecha */
+}
+
+input {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno al seleccionar */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+input:focus {
+    border-bottom: 2px solid #6BBE45; /* Línea inferior al enfocar */
+}
+
+.login-button {
+    padding: 10px; /* Espaciado interno */
+    background-color: #6BBE45; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+.login-button:hover {
+    background-color: #3B3B3B; /* Color de fondo al pasar el mouse */
+}
+
+.login-links {
+    margin-top: 15px; /* Margen superior */
+    text-align: center; /* Centrando el texto */
+}
+
+.login-links a {
+    color: #4DA1F1; /* Color de enlace */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.login-links a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}

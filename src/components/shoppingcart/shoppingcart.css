@@ -1,0 +1,151 @@
+/* Contenedor principal del carrito */
+.cart-content {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Título del carrito */
+.cart-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la tabla del carrito */
+.shopping-cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.shopping-cart-table th,
+.shopping-cart-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+.shopping-cart-table th {
+    background-color: #f4f4f4;
+}
+
+/* Estilos para los botones de acción en la tabla */
+.shopping-cart-table button {
+    background-color: #4B7B70; /* Color de fondo */
+    color: white; /* Color de texto */
+    border: none; /* Sin borde */
+    padding: 5px 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    margin-right: 5px; /* Espacio entre botones */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave al cambiar color */
+}
+
+.shopping-cart-table button:hover {
+    background-color: #3B5D54; /* Color de fondo al pasar el mouse */
+}
+
+.shopping-cart-table button:disabled {
+    background-color: #ccc; /* Color de fondo para botones deshabilitados */
+    cursor: not-allowed; /* Cambia el cursor al pasar el ratón */
+}
+
+/* Estilos para el botón de pago */
+.pay-button {
+    background-color: #6BBE45; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s; /* Transición suave al cambiar color */
+    display: inline-block; /* Cambiado a inline-block para que se ajuste al contenido */
+    margin-top: 20px; /* Espacio superior para separación */
+}
+
+/* Color al pasar el mouse */
+.pay-button:hover {
+    background-color: #4DAA3E; /* Color más oscuro al pasar el mouse */
+}
+
+/* Agregar este estilo para el botón de pago en el modal */
+.cart-content {
+    display: flex; /* Para alinear el contenido */
+    flex-direction: column; /* Orientar en columna */
+    align-items: center; /* Centrar contenido */
+}
+
+/* Espacio adicional para el botón de pago */
+.cart-total {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: right; /* Alinea el total a la derecha */
+}
+
+/* Estilos para un mensaje de vacío */
+.cart-content p {
+    text-align: center;
+    color: #666; /* Color gris para el texto */
+}
+
+
+/* Color al pasar el mouse */
+.pay-button:hover {
+    background-color: #4DAA3E; /* Color más oscuro al pasar el mouse */
+}
+
+/* Agregar este estilo para el botón de pago en el modal */
+.cart-content {
+    display: flex; /* Para alinear el contenido */
+    flex-direction: column; /* Orientar en columna */
+    align-items: center; /* Centrar contenido */
+}
+
+/* Espacio adicional para el botón de pago */
+.cart-total {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: right; /* Alinea el total a la derecha */
+}
+
+/* Estilos para un mensaje de vacío */
+.cart-content p {
+    text-align: center;
+    color: #666; /* Color gris para el texto */
+}
+
+
+/* Estilos para la entrada de cantidad */
+.shopping-cart-table input[type="number"] {
+    width: 60px; /* Ancho de la entrada */
+    text-align: center; /* Centra el texto */
+}
+
+/* Total general */
+.cart-total {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: right; /* Alinea el total a la derecha */
+}
+
+/* Estilos para un mensaje de vacío */
+.cart-content p {
+    text-align: center;
+    color: #666; /* Color gris para el texto */
+}
+.cart-button {
+    position: relative;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -1px;
+    right: -10px;
+    background-color: #4DAA3E;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+  }
+  

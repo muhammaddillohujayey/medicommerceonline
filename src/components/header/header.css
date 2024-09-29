@@ -1,0 +1,125 @@
+.header-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content:space-around;
+  align-items: center; /* Centrar verticalmente todos los elementos */
+  background-color: #A3B1A8; /* Color de fondo del header */
+  padding: 20px 20px; /* Aumentar el espaciado interno superior e inferior */
+  color: #3B3B3B; /* Color del texto */
+  z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra para destacarlo */
+}
+.menu-button {
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  display: flex;
+  align-items: center; /* Centrar verticalmente */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  margin-right: 10px; /* Espacio entre el ícono del menú y el logo */
+}
+
+.menu-icon {
+  font-size: 1.5rem; /* Tamaño del ícono del menú */
+  color: #3B3B3B; /* Color del ícono */
+}
+.menu-icon:hover {
+  color: #6BBE45; /* Color al pasar el mouse */
+}
+
+.logo-section {
+  display: flex; /* Usar flexbox para alinear logo y textos en línea */
+  align-items: center; /* Alinear verticalmente el logo y los textos */
+}
+
+.header-logo {
+  width: 40px; /* Ajustar el tamaño del logo */
+  height: 40px; /* Mantiene la proporción del logo */
+  margin-right: 10px; /* Espacio entre el logo y el título */
+}
+
+.header-container h1 {
+  margin: 0; /* Eliminar margen */
+  font-size: 1.5rem; /* Tamaño de fuente del título */
+}
+
+.header-subtitle {
+  font-size: 1.2rem; /* Tamaño de fuente del subtítulo */
+  color: #3B3B3B; /* Color del texto */
+  margin: 0; /* Sin margen para mantener alineación */
+}
+
+.search-section {
+  position: absolute; /* Mantener la búsqueda centrada */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translateX(-50%); /* Alinear al centro */
+}
+
+.search-form {
+  display: flex; /* Flexbox para el formulario */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.search-input {
+  padding: 8px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Bordes */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 14px; /* Tamaño de fuente */
+  width: 180px; /* Ancho fijo */
+  margin-right: 10px; /* Espaciado entre input y botón */
+}
+
+.search-button {
+  padding: 8px 12px; /* Espaciado interno */
+  background-color: #6BBE45; /* Color del botón */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.user-section {
+  display: flex; /* Flexbox para el usuario */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.user-link {
+  color: #3B3B3B; /* Color del texto */
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  display: flex; /* Flexbox para icono y texto */
+  align-items: center; /* Centrar verticalmente */
+  font-size: 1rem; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.user-icon {
+  margin-right: 8px; /* Espaciado entre icono y texto */
+  font-size: 1.5rem; /* Tamaño del icono */
+}
+
+.user-link:hover {
+  color: #6BBE45; /* Color al pasar el mouse */
+}
+.user-section {
+  display: flex;
+  align-items: center;
+}
+
+.cart-button {
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  display: flex;
+  align-items: center; /* Centrar verticalmente */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  margin-left: 5px; /* Espacio entre el ícono del menú y el logo */
+}
+
+.cart-icon {
+  font-size: 1.5rem; /* Tamaño del ícono del menú */
+  color: #3B3B3B; /* Color del ícono */
+}
+.cart-icon:hover {
+  color: #6BBE45; /* Color al pasar el mouse */
+}
