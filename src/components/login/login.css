@@ -1,6 +1,6 @@
 .login-container {
     width: 100%; /* Ocupa todo el ancho disponible del modal */
-    max-width: 360px; /* Ancho máximo del contenedor de login */
+    max-width: 460px; /* Ancho máximo del contenedor de login */
     margin: 0 auto; /* Centrado automático */
     padding: 20px; /* Espaciado interno */
     background-color: #fff; /* Color de fondo */
@@ -38,6 +38,11 @@ input {
     padding: 10px; /* Espaciado interno */
     border: none; /* Sin borde */
     outline: none; /* Sin contorno al seleccionar */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+input:focus {
+    border-bottom: 2px solid #6BBE45; /* Línea inferior al enfocar */
 }
 
 .login-button {
@@ -47,6 +52,8 @@ input {
     border: none; /* Sin borde */
     border-radius: 5px; /* Bordes redondeados */
     cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
 }
 
 .login-button:hover {

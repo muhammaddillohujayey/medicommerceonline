@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import './header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faBars, faShoppingCart,faPills } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faBars, faShoppingCart, faPills } from '@fortawesome/free-solid-svg-icons';
+import { useShoppingCart } from '../shoppingcart/shoppingcart.js';
 import Login from '../login/login.js';
 import Modal from '../modal/modal.js';
 
 const Header = ({ onSearch }) => {
   const [showModal, setShowModal] = useState(false);
   const [userEmail, setUserEmail] = useState('');
-  const [searchTerm, setSearchTerm] = useState('');
+  const { toggleCart, getCartItemCount } = useShoppingCart(); // Obtener la función para contar productos
 
   const handleLoginClick = () => {
     setShowModal(true);
@@ -16,11 +17,6 @@ const Header = ({ onSearch }) => {
 
   const closeModal = () => {
     setShowModal(false);
-  };
-
-  const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value);
-    onSearch(e.target.value);  // Envía el término de búsqueda al MainContent
   };
 
   return (
@@ -32,7 +28,7 @@ const Header = ({ onSearch }) => {
         <FontAwesomeIcon icon={faPills} className="header-logo" /> 
       </div>
       <div>
-      <h1>Bienvenido a MediCommerce Online</h1>
+        <h1>Bienvenido a MediCommerce Online</h1>
       </div>
 
       <div className="user-section">
@@ -40,15 +36,18 @@ const Header = ({ onSearch }) => {
           <span>{userEmail ? userEmail : 'Mi cuenta'}</span>
           <FontAwesomeIcon icon={faUser} className="user-icon" />  
         </button>
-        <button className="cart-button">
+        <button onClick={toggleCart} className="cart-button">
           <FontAwesomeIcon icon={faShoppingCart} className="cart-icon" />
+          {getCartItemCount() > 0 && ( // Mostrar el contador solo si hay productos en el carrito
+            <span className="cart-count">{getCartItemCount()}</span>
+          )}
         </button>
       </div>
       
       {showModal && (
-          <Modal onClose={closeModal} setShowModal={setShowModal}>
-            <Login setShowModal={setShowModal} setUserEmail={setUserEmail} />
-          </Modal>
+        <Modal onClose={closeModal} setShowModal={setShowModal}>
+          <Login setShowModal={setShowModal} setUserEmail={setUserEmail} />
+        </Modal>
       )}
     </header>
   );

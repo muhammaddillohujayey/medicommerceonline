@@ -3,7 +3,7 @@ import './login.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faLock, faPills } from '@fortawesome/free-solid-svg-icons';
 
-const Login = ({setShowModal, setUserEmail}) => {
+const Login = ({ setShowModal, setUserEmail }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
@@ -21,8 +21,7 @@ const Login = ({setShowModal, setUserEmail}) => {
       setUserEmail(email);
       setTimeout(() => {
         setShowModal(false);
-      },2000);
-      
+      }, 2000);
     } else {
       setMessage('Credenciales incorrectas. Intenta de nuevo.');
     }
@@ -30,32 +29,31 @@ const Login = ({setShowModal, setUserEmail}) => {
 
   return (
     <div className="login-container">
+      <h2>Iniciar sesion</h2>
       <div className="login-logo">
-      <FontAwesomeIcon icon={faPills} className="header-logo" />
+        <FontAwesomeIcon icon={faPills} className="header-logo" />
       </div>
-      <form className="login-form" onSubmit={handleLogin}>
-        <div className="input-group">
-          <FontAwesomeIcon icon={faUser} className="icon" />
-          <input 
-            type="text" 
-            placeholder="Email o Número de Identificación" 
-            value={email} 
-            onChange={(e) => setEmail(e.target.value)} 
-            required 
-          />
-        </div>
-        <div className="input-group">
-          <FontAwesomeIcon icon={faLock} className="icon" />
-          <input 
-            type="password" 
-            placeholder="Contraseña" 
-            value={password} 
-            onChange={(e) => setPassword(e.target.value)} 
-            required 
-          />
-        </div>
-        <button className="login-button" type="submit">Ingresar</button>
-      </form>
+      <div className="input-group">
+        <FontAwesomeIcon icon={faUser} className="icon" />
+        <input 
+          type="text" 
+          placeholder="Email o Número de Identificación" 
+          value={email} 
+          onChange={(e) => setEmail(e.target.value)} 
+          required 
+        />
+      </div>
+      <div className="input-group">
+        <FontAwesomeIcon icon={faLock} className="icon" />
+        <input 
+          type="password" 
+          placeholder="Contraseña" 
+          value={password} 
+          onChange={(e) => setPassword(e.target.value)} 
+          required 
+        />
+      </div>
+      <button className="login-button" type="submit" onClick={handleLogin}>Ingresar</button>
       {message && <p className="login-message">{message}</p>}
       <div className="login-links">
         <a href="#">Recuperar contraseña</a>

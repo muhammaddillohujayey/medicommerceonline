@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './catalog.css';
+import { useShoppingCart } from '../shoppingcart/shoppingcart'; // Asegúrate de que la ruta sea correcta
 
 const productImages = {
     paracetamol: require('../../images/Paracetamol.jpg'),
@@ -18,10 +19,11 @@ const productImages = {
 
 const Catalog = () => {
     const [searchTerm, setSearchTerm] = useState('');
+    const { addToCart } = useShoppingCart(); // Importar la función addToCart
 
-const   products = [
-    { id: 1, name: 'Paracetamol', price: 10000, image: productImages.paracetamol, category: 'Medicamentos' },
-    { id: 2, name: 'Acetaminofen', price: 2500, image: productImages.acetaminofen, category: 'Medicamentos' },
+    const products = [
+        { id: 1, name: 'Paracetamol', price: 10000, image: productImages.paracetamol, category: 'Medicamentos' },
+        { id: 2, name: 'Acetaminofen', price: 2500, image: productImages.acetaminofen, category: 'Medicamentos' },
         { id: 3, name: 'Vitamina C', price: 20000, image: productImages.vitaminaC, category: 'Vitaminas y suplementos' },
         { id: 4, name: 'Mylanta', price: 15000, image: productImages.mylanta, category: 'Medicamentos' },
         { id: 5, name: 'Balsamo labial', price: 12000, image: productImages.balsamoLabial, category: 'Cuidado personal' },
@@ -34,51 +36,60 @@ const   products = [
         { id: 12, name: 'Vitamina D', price: 22000, image: productImages.vitaminaD, category: 'Vitaminas y suplementos' },
     ];
 
-const filteredProducts = products.filter(product =>
-    product.name.toLowerCase().includes(searchTerm.toLowerCase())
+    const filteredProducts = products.filter(product =>
+        product.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value);
+    const handleSearchChange = (e) => {
+        setSearchTerm(e.target.value);
     };
 
-const handleSearchSubmit = (e) => {
-    e.preventDefault();
+    const handleSearchSubmit = (e) => {
+        e.preventDefault();
     };
 
-return (
-    <div className="catalog-container">
-        <h2 className="catalog-title">Catálogo de productos</h2>
+    const handleAddToCart = (product) => {
+        addToCart(product); // Llama a la función addToCart cuando se presiona el botón
+    };
 
-        <form className="search-form" onSubmit={handleSearchSubmit}>
-            <input
-                type="text"
-                className="search-input"
-                placeholder="¿Que estas buscando?"
-                value={searchTerm}
-                onChange={handleSearchChange}
-            />
-            <button className="search-button" type="submit">
-                Buscar
-            </button>
-        </form>
+    return (
+        <div className="catalog-container">
+            <h2 className="catalog-title">Catálogo de productos</h2>
 
-        <div className="catalog">
-            {filteredProducts.length > 0 ? (
-                filteredProducts.map((product) => (
-                <div key={product.id} className="product-card">
-                    <img src={product.image} alt={product.name} className="product-image" />
-                    <h3 className="product-name">{product.name}</h3>
-                    <p className="product-price">${product.price.toFixed(2)}</p>
-                    <button className="add-to-cart">Añadir al carrito</button>
-                </div>
-                ))
-            ) : (
-                <p>No se encontraron productos.</p>
-            )}
+            <form className="search-form" onSubmit={handleSearchSubmit}>
+                <input
+                    type="text"
+                    className="search-input"
+                    placeholder="¿Que estas buscando?"
+                    value={searchTerm}
+                    onChange={handleSearchChange}
+                />
+                <button className="search-button" type="submit">
+                    Buscar
+                </button>
+            </form>
+
+            <div className="catalog">
+                {filteredProducts.length > 0 ? (
+                    filteredProducts.map((product) => (
+                        <div key={product.id} className="product-card">
+                            <img src={product.image} alt={product.name} className="product-image" />
+                            <h3 className="product-name">{product.name}</h3>
+                            <p className="product-price">${product.price.toFixed(2)}</p>
+                            <button 
+                                className="add-to-cart"
+                                onClick={() => handleAddToCart(product)} // Conectar el botón al método handleAddToCart
+                            >
+                                Añadir al carrito
+                            </button>
+                        </div>
+                    ))
+                ) : (
+                    <p>No se encontraron productos.</p>
+                )}
+            </div>
         </div>
-    </div>
-);
+    );
 };
 
 export default Catalog;

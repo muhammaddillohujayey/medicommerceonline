@@ -17,7 +17,7 @@
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     width: 100%; /* Ocupa todo el ancho disponible */
-    max-width: 400px; /* Ancho máximo del modal */
+    max-width: 600px; /* Ancho máximo del modal */
     position: relative;
     z-index: 1001; /* Asegúrate de que esté por encima del overlay */
 }

@@ -1,13 +1,10 @@
 import React from 'react';
 import './modal.css';
 
-const Modal = ({ children, onClose, setShowModal }) => {
-
+const Modal = ({ children, onClose }) => {
   const handleOverlayClick = (e) => {
-
-    if (e.target.className === ('modal-overlay')) {
-      onClose();
-      setShowModal(false);
+    if (e.target.className === 'modal-overlay') {
+      onClose(); // Cierra el modal solo usando la función onClose
     }
   };
 
