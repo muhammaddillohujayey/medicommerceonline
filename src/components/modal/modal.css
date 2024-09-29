@@ -1,0 +1,38 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 400px; /* Ancho máximo del modal */
+    position: relative;
+}
+
+.modal-close {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    font-size: 1.5rem; /* Tamaño del texto */
+    position: absolute; /* Posición absoluta */
+    top: 10px; /* Ajustar distancia desde la parte superior */
+    right: 10px; /* Ajustar distancia desde la derecha */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    color: #3B3B3B; /* Color del icono */
+    transition: color 0.3s; /* Transición suave para el color */
+}
+
+/* Asegúrate de que el botón de cerrar sea visible en todo momento */
+.modal-close:hover {
+    color: #6BBE45; /* Cambia el color al pasar el mouse */
+}

@@ -3,14 +3,18 @@ import './header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faBars } from '@fortawesome/free-solid-svg-icons';
 import Login from '../login/login.js';
-import logo from '../../images/logoMC.webp'; // Ajusta la ruta según tu estructura
+import Modal from '../modal/modal.js';
+import logo from '../../images/logoMC.webp';
 
-
-function Header() {
-  const [showLogin, setShowLogin] = useState(false);
+const Header = () => {
+  const [showModal, setShowModal] = useState(false);
 
   const handleLoginClick = () => {
-    setShowLogin(!showLogin); // Muestra u oculta el componente Login
+    setShowModal(true); //Abre modal
+  };
+
+  const closeModal = () => {
+    setShowModal(false); // Cierra modal
   };
 
   return (
@@ -35,10 +39,15 @@ function Header() {
           <span>Mi cuenta</span>
         </button>
       </div>
-      {/* Mostrar el componente Login cuando el estado showLogin sea verdadero */}
-      {showLogin && <Login />}
+      
+      {showModal && (
+          <Modal onClose={closeModal}>
+            <Login />
+          </Modal>
+      )}
+      
     </header>
   );
-}
+};
 
 export default Header;
