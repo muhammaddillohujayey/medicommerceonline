@@ -1,13 +1,13 @@
 import React from 'react';
 import './modal.css';
-import Login from '../login/login';
 
-const Modal = ({ children, onClose }) => {
+const Modal = ({ children, onClose, setShowModal }) => {
 
-  const handleOverlayClick = (event) => {
-    
-    if (event.target.className === 'modal-overlay') {
+  const handleOverlayClick = (e) => {
+
+    if (e.target.className === ('modal-overlay')) {
       onClose();
+      setShowModal(false);
     }
   };
 

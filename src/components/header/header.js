@@ -8,13 +8,14 @@ import logo from '../../images/logoMC.webp';
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
+  const [userEmail, setUserEmail] = useState(''); 
 
   const handleLoginClick = () => {
-    setShowModal(true); //Abre modal
+    setShowModal(true);
   };
 
   const closeModal = () => {
-    setShowModal(false); // Cierra modal
+    setShowModal(false);
   };
 
   return (
@@ -36,13 +37,13 @@ const Header = () => {
       <div className="user-section">
         <button onClick={handleLoginClick} className="user-link">
           <FontAwesomeIcon icon={faUser} className="user-icon" />
-          <span>Mi cuenta</span>
+          <span>{userEmail ? userEmail : 'Mi cuenta'}</span>
         </button>
       </div>
       
       {showModal && (
-          <Modal onClose={closeModal}>
-            <Login />
+          <Modal onClose={closeModal} setShowModal={setShowModal}>
+            <Login setShowModal={setShowModal} setUserEmail={setUserEmail}/>
           </Modal>
       )}
       

@@ -1,55 +1,67 @@
 import React, { useState } from 'react';
-import './login.css'; // Crea este archivo para estilos personalizados
+import './login.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
-import logo from '../../images/logoMC.webp'; // Asegúrate de tener el logo en la ruta correcta
+import logo from '../../images/logoMC.webp';
 
-const Login = () => {
+const Login = ({setShowModal, setUserEmail}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Lógica para iniciar sesión
-    console.log('Login:', { email, password });
+
+    const fakeUser = {
+      email: 'yury.montoya@uniremington.edu.co',
+      password: '123456'
+    };
+
+    if (email === fakeUser.email && password === fakeUser.password) {
+      setMessage('Inicio de sesión exitoso!');
+      setUserEmail(email);
+      setTimeout(() => {
+        setShowModal(false);
+      },2000);
+      
+    } else {
+      setMessage('Credenciales incorrectas. Intenta de nuevo.');
+    }
   };
 
   return (
     <div className="login-container">
       <div className="login-logo">
-        <img src={logo} alt="MediCommerce Logo" />
+      <img src={logo} alt="MediCommerce Logo" />
       </div>
-
       <form className="login-form" onSubmit={handleLogin}>
         <div className="input-group">
           <FontAwesomeIcon icon={faUser} className="icon" />
-          <input
-            type="text"
-            placeholder="Email o Número de identificación"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
+          <input 
+            type="text" 
+            placeholder="Email o Número de Identificación" 
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
+            required 
           />
         </div>
-
         <div className="input-group">
           <FontAwesomeIcon icon={faLock} className="icon" />
-          <input
-            type="password"
-            placeholder="Contraseña"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
+          <input 
+            type="password" 
+            placeholder="Contraseña" 
+            value={password} 
+            onChange={(e) => setPassword(e.target.value)} 
+            required 
           />
         </div>
-
-        <button type="submit" className="login-button">Ingresar</button>
-
-        <div className="login-links">
-          <a href="#" className="forgot-password">¿Olvidaste tu contraseña?</a><br/><br/>
-          <a href="#" className="create-account">¿No tienes cuenta? Crear cuenta</a>
-        </div>
+        <button className="login-button" type="submit">Ingresar</button>
       </form>
+      {message && <p className="login-message">{message}</p>}
+      <div className="login-links">
+        <a href="#">Recuperar contraseña</a>
+        <p>¿No tienes cuenta? <a href="#">Crea una cuenta</a></p>
+      </div>
     </div>
   );
 };
