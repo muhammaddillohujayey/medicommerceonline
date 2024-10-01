@@ -1,38 +1,31 @@
-/* src/sidebar/sidebar.css */
 .sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #f4f4f4;
-    transition: left 0.3s ease-in-out;
-    padding: 20px;
-    z-index: 1000;
-  }
-  
-  .sidebar.open {
-    left: 0;
-  }
-  
-  .close-button {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 5px;
-    cursor: pointer;
-  }
-  
-  .sidebar h2 {
-    margin-top: 0;
-  }
-  
-  .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar ul li {
-    margin: 10px 0;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: -280px; /* Inicialmente fuera de la pantalla */
+  width: 280px;
+  height: 100%;
+  background-color: #A3B1A8;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+  transition: left 0.3s ease; /* Transición suave */
+}
+
+.sidebar.open {
+  left: 0; /* Cuando está abierto, se alinea con el borde izquierdo */
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.sidebar-section{
+  text-align: left;
+}
