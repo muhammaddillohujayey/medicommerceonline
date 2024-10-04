@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './catalog.css';
-import { useShoppingCart } from '../shoppingcart/shoppingcart'; // Asegúrate de que la ruta sea correcta
+import { useShoppingCart } from '../shoppingcart/shoppingcart';
 
 const productImages = {
     paracetamol: require('../../images/Paracetamol.jpg'),
@@ -19,7 +19,7 @@ const productImages = {
 
 const Catalog = () => {
     const [searchTerm, setSearchTerm] = useState('');
-    const { addToCart } = useShoppingCart(); // Importar la función addToCart
+    const { addToCart } = useShoppingCart();
 
     const products = [
         { id: 1, name: 'Paracetamol', price: 10000, image: productImages.paracetamol, category: 'Medicamentos' },
@@ -49,7 +49,7 @@ const Catalog = () => {
     };
 
     const handleAddToCart = (product) => {
-        addToCart(product); // Llama a la función addToCart cuando se presiona el botón
+        addToCart(product);
     };
 
     return (
@@ -78,7 +78,7 @@ const Catalog = () => {
                             <p className="product-price">${product.price.toFixed(2)}</p>
                             <button 
                                 className="add-to-cart"
-                                onClick={() => handleAddToCart(product)} // Conectar el botón al método handleAddToCart
+                                onClick={() => handleAddToCart(product)}
                             >
                                 Añadir al carrito
                             </button>
