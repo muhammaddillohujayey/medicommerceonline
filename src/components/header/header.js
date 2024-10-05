@@ -44,7 +44,7 @@ const Header = ({ onSearch }) => {
         </button>
         <button onClick={toggleCart} className="cart-button">
           <FontAwesomeIcon icon={faShoppingCart} className="cart-icon" />
-          {getCartItemCount() > 0 && ( // Mostrar el contador solo si hay productos en el carrito
+          {getCartItemCount() > 0 && (
             <span className="cart-count">{getCartItemCount()}</span>
           )}
         </button>
